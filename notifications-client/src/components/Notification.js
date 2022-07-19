@@ -10,7 +10,7 @@ import { toggleNotifications } from "../api/NotificationApi"
 
 export const Notification = ({ notificationData }) => {
   const { id, description, read } = notificationData;
-  const [open, setOpen] = useState(read);
+  const [open, setOpen] = useState(!read);
   const [showSnack, setSnack] = useState(false);
 
   const toggleRead = async (e) => {
